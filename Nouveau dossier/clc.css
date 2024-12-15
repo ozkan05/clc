@@ -1,0 +1,124 @@
+body {
+    background-color: #000; /* Noir pur */
+    color: white; /* Texte par défaut en blanc pour une bonne lisibilité */
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh;
+}
+ 
+/* Calculatrice */
+.calculator {
+    padding: 20px; /* Augmente le padding pour un design plus aéré */
+    border-radius: 1.5em; /* Coins plus arrondis */
+    height: 500px; /* Augmente la hauteur */
+    width: 400px; /* Augmente la largeur */
+    background-color: #191b28; /* Couleur sombre */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 8px 8px; /* Accentuation de l'ombre */
+    margin: auto; /* Centre la calculatrice avec des marges automatiques */
+}
+ 
+/* Historique */
+.history {
+    height: 100px; /* Augmente la hauteur de l'historique */
+    overflow-y: scroll;
+    background-color: #dcdbe1; /* Fond clair */
+    margin-bottom: 10px;
+    border-radius: 10px; /* Coins légèrement arrondis */
+    padding: 10px;
+}
+ 
+#history {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #dcdbe1;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    font-size: 1rem; /* Augmente légèrement la taille de la police */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+ 
+/* Zone d'affichage */
+.display-box {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #dcdbe1; /* Fond clair pour l'affichage */
+    border: solid black 1px; /* Contour légèrement plus épais */
+    color: black;
+    border-radius: 10px; /* Arrondir les coins */
+    width: 100%;
+    height: 80px; /* Augmente la hauteur */
+    font-size: 2rem; /* Texte plus grand */
+    text-align: right; /* Alignement du texte à droite */
+    padding: 10px;
+}
+ 
+/* Boutons */
+.button {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #64278f; /* Couleur violette */
+    color: white;
+    border: solid black 1px;
+    width: 100%;
+    border-radius: 20px; /* Arrondit davantage les boutons */
+    height: 50px; /* Augmente la hauteur */
+    font-size: 1.5rem; /* Texte plus grand */
+    outline: none;
+    transition: background-color 0.3s ease; /* Transition fluide */
+}
+ 
+/* Effet de sombrement lors du survol */
+.button:hover {
+    background-color: #4f1f70; /* Couleur plus sombre lorsque survolé */
+}
+ 
+.button:active {
+    background: #e5e5e5;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    color: black; /* Texte noir lorsque cliqué */
+}
+ 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%; /* Réduit la largeur à 90% de l'écran */
+        height: auto; /* Permet à la calculatrice de s'adapter à la hauteur du contenu */
+        padding: 15px;
+    }
+ 
+    .display-box {
+        height: 70px; /* Réduit la hauteur pour les écrans plus petits */
+        font-size: 1.5rem; /* Réduit la taille de la police */
+    }
+ 
+    .history {
+        height: 80px; /* Réduit la hauteur de l'historique */
+        font-size: 0.9rem;
+    }
+ 
+    .button {
+        height: 45px; /* Réduit la hauteur des boutons */
+        font-size: 1.2rem; /* Réduit légèrement la taille de la police */
+        border-radius: 18px; /* Réduit légèrement l'arrondi pour s'adapter */
+    }
+}
+ 
+@media (max-width: 480px) {
+    .calculator {
+        padding: 10px; /* Réduit le padding pour économiser de l'espace */
+    }
+ 
+    .display-box {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+ 
+    .button {
+        height: 40px;
+        font-size: 1rem;
+        border-radius: 15px; /* Ajuste l'arrondi pour les écrans très petits */
+    }
+}
